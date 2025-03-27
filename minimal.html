@@ -1,0 +1,257 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 4 - Harshita Mhaske</title>
+        <style>
+           
+            video {
+                border: none; 
+                width: 100%;
+                height: 100%; 
+                object-fit: contain; 
+            }
+    
+          
+    
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 300; 
+    margin: 0;
+    padding: 0;
+    color: #58585b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+   
+    background-image: url("C:/Users/Harshita/OneDrive/Desktop/New%20folder%20(2)/L7Jw.gif");
+    background-size: contain; 
+    background-position: cover; 
+    background-repeat: repeat;
+}
+ 
+  h2 {
+            color: #333; 
+        }
+        p, h1, h2, h3, h4, h5, h6, li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.02em;
+}
+
+
+h2, h3, li {
+    line-height: 1.9; 
+}
+header {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column; 
+    background-color: #fcfcfe;
+    align-items: center; 
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 60%; 
+    margin: 2em 20%; 
+}
+.video-container {
+    display: flex; 
+    flex-direction: row;
+    width: 200%;
+    height: auto;
+    justify-content: space-between;
+
+}
+
+.video-container video {
+    flex: 1;
+    width: 50%;
+    height: auto; 
+    object-fit: contain;
+}
+
+
+.project video 
+{
+    
+    
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.project a {
+    display: block;
+    text-decoration: none;
+}
+
+.project img, .project video {
+    width: 50%; 
+    height: auto; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.project .description {
+    padding: 1em;
+    text-align: left;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.project-images img {
+    width: 50%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #ffffff;
+    width: 100%;
+    margin-top: auto;
+}
+
+.big-image-container {
+    display: flex; 
+    justify-content: center; 
+    gap: 0; 
+    width: 100%; 
+    margin: 0 auto; 
+    
+}
+
+.big-image {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    margin: 1px 0;
+    margin-bottom: 0;
+}
+
+.small-image {
+    width: 30%;
+    height: auto; 
+}
+
+
+   
+    strong {
+        color: #000000; 
+    }
+
+    a {
+        color: #0066cc; 
+        text-decoration: none; 
+    }
+
+  
+    a:hover {
+        text-decoration: underline; 
+    }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1</h1>
+    </header>
+
+    <main>
+        <div class="project">
+           
+              
+            <iframe class="project-video" src="https://www.youtube.com/embed/hBNCrke3qqk?si=vX8i0CQJeimVxTUK" title="YouTube video" allowfullscreen width="560" height="315" style="margin-top: 20px; border: none;"></iframe>
+            
+
+
+            <div class="description">
+                <p><h2><strong>MINImal Robot Dog</strong></h2></p>
+
+                
+                <div class="project-images">
+                    <img src="media/minimal_simulation.png" alt="Project 1 Image">
+                    <img src="media/minimal.jpg" alt="Project 1 Image">
+                </div>
+                <br>
+
+                <p>
+                   <h4><li>Inspired by SpotMiniMini's work on RL trained policies using only IMU, I wanted to explore the effect of ground reaction forces and contact sensing within a linear policy. My goal was to maintain low-cost robotic hardware while enabling the robot to handle terrain sensing autonomously.</li></h4>
+                </p><br>
+            
+                <p>
+                    <b><h2>Training</h2></b>
+                    <h4><li>All three robot policies IMU, IMU+Contact and IMU+Force were trained on a higher and randomized terrain. The observation space for force policies consists of 24 inputs whereas IMU+Contacts - 16 inputs and IMU - 12 inputs.</li></h4></p>
+                    <div class="project-images">
+                        <img src="media/Minimal HD.gif" alt="Project 1 Image">
+                        
+                    </div>
+
+                   
+
+
+                    <b><h2>Contact Sensing</h2></b>
+                    <div class="project-images">
+                        <img src="media/minimal_sensor.png" alt="Project 1 Image">
+
+                        <img src="media/minimal_realsen.png" alt="Project 1 Image">
+                    </div>
+
+
+                    <p><h4>We explored various methods by which such contact estimation could be enabled. We chose FSR with a small form factor (10mm X 20 mm) and a force sensing range of 0.2N to 20N. The FSR is sandwiched between the lower-leg and foot of the robot. The lower leg and foot are separated by 4 silicon O-rings when assembled. When the foot contacts the ground, the O-rings are compressed and the cylindrical boss of the foot applies force on the FSR, decreasing its resistance. When the foot breaks contact with the ground, the O-rings decompress, causing the foot to return to its original position. The force applied on the FSR is decreased, increasing its resistance.</li></h4>
+                    </p>
+                    <div class="project-images">
+                        <img src="media/minimal_voldiv.jpg" alt="Project 1 Image">
+                      
+                    </div>
+                    
+                    <p><h4>We use a voltage divider circuit to convert the varying 
+                        resistance value to a voltage value, which is then read by a 
+                        microcontroller. </h4></p>
+                
+                    <div class="project-images">
+                        <img src="media/contact_1.jpg" alt="Project 1 Image">
+                        <img src="media/contact_2.jpg" alt="Project 1 Image">
+                    </div>
+                    <br>
+
+
+                    <p><h4>Research </h4> <div class="research-description" style="text-align: left;">
+                        <h4><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground contact and reaction force sensing for linear policy control of quadruped robot</a></h4>
+                      </div></p>
+
+
+
+        
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Harshita Mhaske</p>
+    </footer>
+</body>
+</html>
