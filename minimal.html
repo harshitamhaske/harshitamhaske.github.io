@@ -171,9 +171,6 @@ footer {
     }
 
 
-
-
-
     </style>
 </head>
 <body>
@@ -201,8 +198,12 @@ footer {
 
                 <p>
                    <h4><li>Inspired by SpotMiniMini's work on RL trained policies using only IMU, I wanted to explore the effect of ground reaction forces and contact sensing within a linear policy. My goal was to maintain low-cost robotic hardware while enabling the robot to handle terrain sensing autonomously.</li></h4>
-                </p><br>
-            
+                </p>
+                
+                <p><h4><li> IMU: with ot = [r,p,ω,v,S(t)]⊤ ∈ R12</li>
+                       <li> IMU+Force: with ot = [r,p,ω,v,S(t), fG ]⊤ ∈ R24</li>
+                       <li>IMU+Contacts: with ot = [r,p,ω,v,S(t),C]⊤ ∈ R16</li> 
+                    </h4></p>
                 <p>
                     <b><h2>Training</h2></b>
                     <h4><li>All three robot policies IMU, IMU+Contact and IMU+Force were trained on a higher and randomized terrain. The observation space for force policies consists of 24 inputs whereas IMU+Contacts - 16 inputs and IMU - 12 inputs.</li></h4></p>
@@ -210,9 +211,6 @@ footer {
                         <img src="media/Minimal HD.gif" alt="Project 1 Image">
                         
                     </div>
-
-                   
-
 
                     <b><h2>Contact Sensing</h2></b>
                     <div class="project-images">
