@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshita Mhaske - Portfolio</title>
     <style>
-        body {
+   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 70px; 
     background-color: #cbcbcc;
     color: #333;
 }
+
 header {
     position: relative;
     height: 60vh;
@@ -39,21 +40,23 @@ nav {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: absolute;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000; 
 }
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 nav li {
-    margin-right: 20px;
+    margin: 10px;
 }
 nav a {
     text-decoration: none;
@@ -68,7 +71,6 @@ header h1 {
     font-size: 2em;
     color: #070000;
 }
-
 .resume {
     position: absolute;
     top: 70%;
@@ -86,6 +88,7 @@ header h1 {
     background-color: #0056b3;
 }
 
+/* PROJECTS */
 section#projects {
     padding: 2em;
     background-color: #fff;
@@ -94,17 +97,24 @@ section#projects {
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1em;
-    margin: 2em 10%;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 .project {
-    position: relative;
-    border: 0.5px solid #ddd;
+    width: 300px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    width: calc(30% - 5em);
-    margin-bottom: 1em;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+.project:hover {
+    transform: scale(1.02);
 }
 .project a {
     display: block;
@@ -114,7 +124,7 @@ section#projects {
 .project img,
 .project video {
     width: 100%;
-    height: 50%;
+    height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
@@ -124,14 +134,13 @@ section#projects {
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 .project .subdescription {
-    padding: 1em;
+    padding: 0.5em 1em;
     text-align: left;
     font-family: 'Courier New', monospace;
     font-size: 16px;
     font-weight: bold;
     font-style: italic;
 }
-
 .hover-message {
     position: absolute;
     top: 50%;
@@ -150,33 +159,158 @@ section#projects {
     opacity: 1;
     transform: translateY(0);
 }
-
 section#skills {
     padding: 1em;
     background-color: #f4f4f4;
     text-align: center;
 }
+
 .skills-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 2%;
-
+    gap: 2em;
     padding: 2em;
-    margin: 2em 10em;
+    margin: 2em auto;
+    max-width: 1200px;
 }
+
 .skill {
     flex: 0 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    overflow: hidden;
     width: 150px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.skill .description {
+    font-size: 0.85em;
+}
+
+
+
+#research {
+    background-color: #f9f9f9;
+    padding: 3em 1em;
+    text-align: center;
+}
+
+.research-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+.research-video {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    background-image: url('https://img.youtube.com/vi/hBNCrke3qqk/hqdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 300px;
+}
+
+.video-thumbnail {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: translate(-50%, -50%);
+    opacity: 0.85;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.research-description {
+    text-align: left;
+    padding: 1em;
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+.research-description h3 a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.research-description h3 a:hover {
+    text-decoration: underline;
+}
+
+.research-certificate {
+    margin-top: 1em;
+    width: 100%;
+    max-width: 470px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .research-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .research-video,
+    .research-description {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .play-button {
+        width: 60px;
+    }
+}
+
+section#Aboutme {
+    text-align: center;
+    padding: 2em;
+    background-color: #fff;
+}
+.aboutme-container {
+    display: inline-block;
+    max-width: 500px;
+}
+.aboutme-container img {
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.aboutme-container div {
+    text-align: left;
+    padding: 0 1em;
 }
 
 footer {
@@ -186,49 +320,51 @@ footer {
     color: #fff;
 }
 
-section#research {
-    padding: 0.2em;
-    background-color: #ddd;
-    text-align: center;
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-container,
+    .skills-container,
+    .research-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .project,
+    .research {
+        width: 90%;
+    }
+
+    .skills-container {
+        gap: 1em;
+    }
+
+    .skill {
+        width: 80%;
+    }
+
+    .aboutme-container {
+        width: 90%;
+    }
 }
-.research-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 2%;
-   
-    padding: 1em;
-    margin: 2em 10em;
-}
-.research {
-    flex: 0 0 auto;
-    border: 1px solid #739ae3;
-    border-radius: 6px;
-    overflow: hidden;
-    width: 650px;
-}
-.research img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #284b7c;
-}
-.research .description {
-    padding: 1em;
-    text-align: left;
-}
+
 
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#Aboutme">About Me</a></li>
-        </ul>
-    </nav>
+  <nav style="background-color: #333; color: #fff; text-align: center; padding: 1em 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+        <li style="margin-right: 20px;"><a href="#projects" style="text-decoration: none; color: #fff; font-size: 1.2em;">Projects</a></li>
+        <li style="margin-right: 20px;"><a href="#skills" style="text-decoration: none; color: #fff; font-size: 1.2em;">Skills</a></li>
+        <li style="margin-right: 20px;"><a href="#Aboutme" style="text-decoration: none; color: #fff; font-size: 1.2em;">About Me</a></li>
+        <li style="margin-right: 20px;"><a href="#hobbies" style="text-decoration: none; color: #fff; font-size: 1.2em;">Hobbies</a></li> <!-- New link for Hobbies -->
+    </ul>
+</nav>
+
 
     <header>
         <img src="media/landscape.jpg" class="background-image" alt="Background">
@@ -242,35 +378,27 @@ section#research {
 </html>
 
 
-<section id="research" style="text-align: center;">
-    <h2>Publication</h2>
-    <div class="research-container" style="display: flex; align-items: center; justify-content: center; gap: 2em;">
-     
-        <div class="research-video" style="flex: 1; text-align: center;">
-            <a href="https://www.youtube.com/watch?v=hBNCrke3qqk" target="_blank" style="display:inline-block; position:relative; width:560px; height:315px; background-image:url('https://img.youtube.com/vi/hBNCrke3qqk/hqdefault.jpg'); background-size:cover; background-position:center; text-decoration:none;">
-                <img src="https://img.icons8.com/ios-filled/100/ffffff/play-button-circled--v1.png" alt="Play" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:80px; opacity:0.8;">
-              </a>
-                <br>
-        
-        </div>
-
-
-          
-
-        <div class="research-description" style="flex: 1; text-align: left; padding: 20px;">
-            <h4><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground contact and reaction force sensing for linear policy control of quadruped robot</a></h5>
-            <p><h6>Harshita Mhaske  Aniket Mandhare  Dr. Jidong Huang  Dr. Yu Bai</h6>
-            <h5>The research focuses on testing a linear policy by augmenting the observation space with contacts and ground reaction forces.</h3>
-            <h6>(Accepted at ICCAR 2025)</h6>
-            <br>
-            <img src="media/iccar_certificate.JPG" alt="Project 1 Image" width="470" height="350">
-
-           
-            
-            </p>
-        </div>
+<section id="research">
+  <h2 style="margin-bottom: 1em;">Publication</h2>
+  <div class="research-container">
+    
+    <div class="research-video">
+      <a href="https://www.youtube.com/watch?v=hBNCrke3qqk" target="_blank" class="video-thumbnail">
+        <img class="play-button" src="https://img.icons8.com/ios-filled/100/ffffff/play-button-circled--v1.png" alt="Play">
+      </a>
     </div>
+
+    <div class="research-description">
+      <h3><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground Contact and Reaction Force Sensing for Linear Policy Control of Quadruped Robot</a></h3>
+      <p><strong>Authors:</strong> Harshita Mhaske, Aniket Mandhare, Dr. Jidong Huang, Dr. Yu Bai</p>
+      <p>The research focuses on testing a linear policy by augmenting the observation space with contacts and ground reaction forces.</p>
+      <p><em>Accepted at ICCAR 2025</em></p>
+      <img src="media/iccar_certificate.JPG" alt="ICCAR Certificate" class="research-certificate">
+    </div>
+    
+  </div>
 </section>
+
 
 
     <section id="projects">
@@ -284,7 +412,7 @@ section#research {
             <div class="project">
                 <a href="minimal.html">
                     <img src="media/mini.jpg" alt="Project 2 Image">
-                    <span class="hover-message">Click here </span>
+                    <span class="hover-message">Click here for project details </span>
                 </a>
                 <div class="description">
                     <h3>Robot Dog MINImal </h3>
@@ -299,7 +427,7 @@ section#research {
                     <a href="html1.html">
                     
                     <img src="media/schvaan walk.GIF" alt="Project 2 Image">
-                    <span class="hover-message">Click here </span>
+                    <span class="hover-message">Click here for project details </span>
                 </a>
                 <div class="description">
                     <h3>Schvaan Robot Dog </h3>
@@ -311,7 +439,7 @@ section#research {
             <div class="project">
                 <a href="html2.html">
                     <img src="media/rtos1.GIF" alt="Project 3 Image">
-                    <span class="hover-message">Click here </span>
+                    <span class="hover-message">Click here for project details</span>
                 </a>
                 <div class="description">
                     <h3>Cooling Fan Controller </h3>
@@ -324,7 +452,7 @@ section#research {
             <div class="project">
                 <a href="html3.html">
                     <img src="media/detect.gif" alt="Project 4 Image">
-                    <span class="hover-message">Click here </span>
+                    <span class="hover-message">Click here for project details</span>
                 </a>
                 <div class="description">
                     <h3>Detection and Classification of Objects using Pointing Gestures </h3>
@@ -338,7 +466,7 @@ section#research {
                 <a href="path/to/project4.html">
                     <a href="html4.html">
                     <img src="media/3dprinter.jpeg" alt="Project 5 Image">
-                    <span class="hover-message">Click here </span>
+                    <span class="hover-message">Click here for project details </span>
                 </a>
                 <div class="description">
                     <h3>3D Printer</h3>
@@ -404,20 +532,53 @@ section#research {
         </div>
     </section>
 
-    <section id="Aboutme" style="text-align: center;">
-        <h2>About Me</h2>
-        <div class="aboutme-container" style="display: inline-block;">
-            <div class="Harshita Mhaske">
-                <img src="media/Harshita_pic.jpg" style="width: 200px;" alt="Harshita Mhaske">
-                <div class="Harshita Mhaske" style="text-align: left;">
-                    <h3>Harshita Mhaske</h3>
-                    <p>Email- harshitamhaske97@gmail.com</p>
-                    <p>Fullerton, CA</p>
-                </div>
-            </div>
+  <section id="Aboutme" style="text-align: center; padding: 3em 1em;">
+    <h2 style="font-size: 2.5em; margin-bottom: 1.5em; color: #333;">About Me</h2>
+    <div class="aboutme-container" style="display: inline-block; text-align: center; max-width: 600px; padding: 1em; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <img src="media/Harshita_pic.jpg" style="width: 200px; height: 300px; object-fit: cover; border: 3px solid #007bff;" alt="Harshita Mhaske">
+        <div class="Harshita Mhaske" style="text-align: left; margin-top: 1em;">
+            <h3 style="font-size: 1.8em; color: #333;">Harshita Mhaske</h3>
+            <p style="font-size: 1.1em; color: #555;">Email: <a href="mailto:harshitamhaske97@gmail.com" style="color: #007bff;">harshitamhaske97@gmail.com</a></p>
+            <p style="font-size: 1.1em; color: #555;">Location: Fullerton, CA</p>
         </div>
-    </section>
+    </div>
+</section>
+<section id="hobbies" style="text-align: center; background-color: #fff; padding: 3em 1em;">
+    <h2 style="font-size: 2.5em; margin-bottom: 1.5em; color: #333;">Hobbies and Activities</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2em;">
+      
+         <div style="width: 280px; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <a href="science.html" style="text-decoration: none;">
+                
+                <img src="media/hobby_science.jpg" alt="science" style="width: 100%; height: 320px; object-fit: fill;">
+                <h4 style="margin: 1em 0; font-size: 1.3em; color: #007bff;">Curious about Science</h4>
+            </a>
+        </div>
+
+           <div style="width: 280px; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <a href="paintings.html" style="text-decoration: none;">
+                <img src="media/hobby_einstein.jpg" alt="My Paintings" style="width: 100%; height: 320px; object-fit: fill;">
+                <h4 style="margin: 1em 0; font-size: 1.3em; color: #007bff;">My Paintings</h4>
+            </a>
+        </div>
+        
+        <div style="width: 280px; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <a href="astrophotography.html" style="text-decoration: none;">
+                <img src="media/hobby_me.JPG" alt="Astrophotography" style="width: 100%; height: 320px; object-fit: cover;">
+                <h4 style="margin: 1em 0; font-size: 1.3em; color: #007bff;">Astrophotography</h4>
+            </a>
+        </div>
+
+     
+
+   
     
+    </div>
+</section>
+
+
+
+
     
         <footer>
             <p>&copy; 2023 Harshita Mhaske</p
