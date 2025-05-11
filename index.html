@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <title>Harshita Mhaske - Portfolio</title>
     <style>
    body {
@@ -20,14 +21,12 @@ header {
     overflow: hidden;
 }
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(2px);
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
+
 .foreground-image {
     position: absolute;
     top: 50%;
@@ -396,7 +395,7 @@ footer {
   }
 
   .nav-links li {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .nav-links a {
@@ -410,6 +409,18 @@ footer {
       display: none;
     }
   }
+
+  @media (max-width: 600px) {
+  header pre code {
+    font-size: 1em;
+  }
+
+  header a {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
+
 </style>
 
 
@@ -425,93 +436,124 @@ footer {
 
 
 
-<header style="position: relative; text-align: justify; color: white;">
+<header style="position: relative; text-align: justify; color: white; padding: 2em 1em;">
+
   <img src="media/bgim.png" class="background-image" alt="Background" style="width: 100%; height: auto;">
 
   <div style="
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 95%; 
-      max-width: none; 
-      padding: 2em;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
-      font-family: 'Courier New', monospace;
-      font-size: 1.3em;
-      color: #00ff90;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-      display: flex;
-      justify-content: space-evenly; 
-      text-align: left;
-  ">
-
-  <pre style="
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 1000px;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  color: #00ff90;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+">
+ <pre style="
+  flex: 1 1 300px;
   color: #dcdcdc;
   padding: 1em;
-  border-radius: 5px;
-  font-family: 'Courier New', monospace;
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 1.5;
-  max-width: 1000px;
-  margin: 0; 
+  margin: 0;
+  background: #1e1e1e;
+  border-radius: 5px;
   overflow-x: auto;
+  max-width: 100%;
 ">
   <code>
-<span style="color: #569CD6;">class</span> Harshita {
+<span style="color: #569CD6;">class</span> <span style="font-size: 1.2em; font-weight: bold;color: #CE9178;">Harshita</span> {
 <span style="color: #569CD6;">public</span>:
     <span style="color: #569CD6;">void</span> greet() {
-        <span style="color: #DCDCAA;">std::cout</span> &lt;&lt; <span style="color: #CE9178; font-size: 1.6em;">"Hello, world!"</span> &lt;&lt; <span style="color: #DCDCAA;">std::endl</span>;
-    }  <span style="color: #4EC9B0;">std::string</span> role = <span style="color: #CE9178; font-size: 1.6em;">"Robotics Software Engineer"</span>;
-    <span style="color: #4EC9B0;">std::vector&lt;std::string&gt;</span> interests = {
-        <span style="color: #CE9178; font-size: 1.4em;">"Mobile Robotics"</span>, <span style="color: #CE9178; font-size: 1.4em;">"Reinforcement Learning"</span>, 
-        <span style="color: #CE9178; font-size: 1.4em;">"Legged Locomotion"</span>
+        <span style="color: #DCDCAA;">std::cout</span> &lt;&lt; <span style="font-size: 1.15em; font-weight: bold;color: #CE9178;">"Hello, world!"</span> &lt;&lt; <span style="color: #DCDCAA;">std::endl</span>;
+    }  <span style="color: #4EC9B0;">std::string</span> role = 
+        <span style="font-size: 1.4em; font-weight: bold; color: #CE9178;">"Robotics Software Engineer"</span>;
+    <span style="color: #4EC9B0;">std::vector&lt;std::string&gt;</span> 
+        <span style="color: #9CDCFE;">interests</span> = {<span style="font-size: 1.4em; font-weight: bold; color: #CE9178;">"Mobile Robotics"</span>, 
+        <span style="font-size: 1.4em; font-weight: bold;color: #CE9178;">"Reinforcement Learning"</span>, 
+        <span style="font-size: 1.4em; font-weight: bold;color: #CE9178;">"Legged Locomotion"</span>
     };};
   </code>
 </pre>
 
 
-
-      <div style="display: flex; justify-content: center; align-items: center; padding-left: 20px;">
-      <a href="media/HarshitaMhaske_resumedoc.pdf" target="_blank"
-         style="background-color: #007BFF; color: white; padding: 12px 40px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1em;">
-        View Resume
-      </a>
-    </div>
-
-
+  <div style="flex: 0 1 220px; text-align: center;">
+    <a href="media/HarshitaMhaske_resumedoc.pdf" target="_blank"
+       style="display: inline-block; background-color: #007BFF; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1em;">
+      View Resume
+    </a>
   </div>
+</div>
+
 </header>
 
 
- <section id="research" style="padding: 1em;">
+<section id="research" style="padding: 1em;">
   <h2 style="margin-bottom: 1em; text-align: center;">Publication</h2>
 
-  <div class="research-container" style="display: flex; flex-direction: column; gap: 2em; width: 100%; padding: 0 ;">
+  <div class="research-container" style="display: flex; flex-direction: column; gap: 2em; width: 100%;">
 
-    <div class="research-entry" style="width: 100%; border: 1px solid #ddd; padding: 1em; box-sizing: border-box; display: flex; flex-direction: row; min-height: 300px; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0.3 4px 8px rgba(0,0,0,0.1);">
+    <div class="research-entry" style="
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      width: 100%;
+      padding: 1em;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    ">
 
-      <div class="research-video" style="flex: 1; margin-right: 1em; display: flex; align-items: center; justify-content: center;">
+      <div class="research-video" style="
+        flex: 1 1 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
         <a href="https://www.youtube.com/watch?v=hBNCrke3qqk" target="_blank">
           <img class="play-button" src="https://img.icons8.com/ios-filled/100/ffffff/play-button-circled--v1.png" alt="Play" style="width: 60px; height: 60px; border-radius: 50%;">
         </a>
       </div>
 
-      <div class="research-description" style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
-        <h3><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground Contact and Reaction Force Sensing for Linear Policy Control of Quadruped Robot</a></h3>
+      <div class="research-description" style="
+        flex: 2 1 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      ">
+        <h3 style="margin: 0 0 0.5em;"><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground Contact and Reaction Force Sensing for Linear Policy Control of Quadruped Robot</a></h3>
         <p><strong>Authors:</strong> Harshita Mhaske, Aniket Mandhare, Dr. Jidong Huang, Dr. Yu Bai</p>
         <p>The research focuses on testing a linear policy by augmenting the observation space with contacts and ground reaction forces.</p>
         <p><em>Accepted at ICCAR 2025</em></p>
       </div>
 
-      <div style="flex: 1.4; display: flex; align-items: center; justify-content: center; padding-left: 1em;">
-        <img src="media/iccar_certificate.JPG" alt="ICCAR Certificate" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+      <div style="
+        flex: 1.4 1 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <img src="media/iccar_certificate.JPG" alt="ICCAR Certificate" style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
       </div>
 
     </div>
 
   </div>
+</section>
+
 </section>
 
     <section id="projects">
@@ -603,14 +645,7 @@ footer {
                 </div>
             </div>
 
-            <div class="skill">
-                <img src="media/Research-Keyboard.jpg" alt="Research Interest">
-                <div class="description">
-                    <h3>Research Interest</h3>
-                    <p>Bioinspired Robotics</p>
-                </div>
-            </div>
-
+           
             <div class="skill">
                 <img src="media/program.jpg" alt="Programming">
                 <div class="description">
@@ -623,7 +658,7 @@ footer {
                 <img src="media/mech_img.jpg" alt="Mechanical">
                 <div class="description">
                     <h3>Mechanical</h3>
-                    <p>Electromechanical assemblies</p>
+                    <p>Electromechanical assembly</p>
                 </div>
             </div>
 
@@ -639,7 +674,14 @@ footer {
                 <img src="media/manufacturing.jpeg" alt="Manufacturing">
                 <div class="description">
                     <h3>Manufacturing</h3>
-                    <p>3D Printing, Soldering, Electromechanical assembly</p>
+                    <p>3D Printing, Soldering</p>
+                </div>
+            </div>
+             <div class="skill">
+                <img src="media/Research-Keyboard.jpg" alt="Research Interest">
+                <div class="description">
+                    <h3>Research Interest</h3>
+                    <p>Bioinspired Robotics</p>
                 </div>
             </div>
 
