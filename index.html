@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +26,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(5px);
+    filter: blur(2px);
 }
 .foreground-image {
     position: absolute;
@@ -55,6 +56,14 @@ nav ul {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.nav-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
 nav li {
     margin: 10px;
 }
@@ -88,7 +97,6 @@ header h1 {
     background-color: #0056b3;
 }
 
-/* PROJECTS */
 section#projects {
     padding: 2em;
     background-color: #fff;
@@ -179,7 +187,7 @@ section#skills {
 .skill {
     flex: 0 0 auto;
     width: 150px;
-    height: 200px;
+    height: 230px;
     border: 1px solid #ddd;
     border-radius: 8px; 
     overflow: hidden;
@@ -355,51 +363,156 @@ footer {
 
     </style>
 </head>
+
+
 <body>
-  <nav style="background-color: #333; color: #fff; text-align: center; padding: 1em 0; position: fixed; top: 0; left: 0; width: 100%; z-index: 10;">
-    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;">
-        <li style="margin-right: 20px;"><a href="#projects" style="text-decoration: none; color: #fff; font-size: 1.2em;">Projects</a></li>
-        <li style="margin-right: 20px;"><a href="#skills" style="text-decoration: none; color: #fff; font-size: 1.2em;">Skills</a></li>
-        <li style="margin-right: 20px;"><a href="#Aboutme" style="text-decoration: none; color: #fff; font-size: 1.2em;">About Me</a></li>
-        <li style="margin-right: 20px;"><a href="#hobbies" style="text-decoration: none; color: #fff; font-size: 1.2em;">Hobbies</a></li> <!-- New link for Hobbies -->
-    </ul>
+
+<style>
+  nav {
+    box-sizing: border-box;
+    background-color: #333;
+    color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+  }
+
+  .nav-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+
+
+<nav>
+  <div class="nav-title">Harshita Mhaske</div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#Aboutme">About Me</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+  </ul>
 </nav>
 
 
-    <header>
-        <img src="media/landscape.jpg" class="background-image" alt="Background">
-        <img src="media/title.jpg" class="foreground-image" alt="Foreground">
-   
-      
-    </header>
+
+<header style="position: relative; text-align: justify; color: white;">
+  <img src="media/bgim.png" class="background-image" alt="Background" style="width: 100%; height: auto;">
+
+  <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%; 
+      max-width: none; 
+      padding: 2em;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.3em;
+      color: #00ff90;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-evenly; 
+      text-align: left;
+  ">
+
+  <pre style="
+  color: #dcdcdc;
+  padding: 1em;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.3em;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0; 
+  overflow-x: auto;
+">
+  <code>
+<span style="color: #569CD6;">class</span> Harshita {
+<span style="color: #569CD6;">public</span>:
+    <span style="color: #569CD6;">void</span> greet() {
+        <span style="color: #DCDCAA;">std::cout</span> &lt;&lt; <span style="color: #CE9178; font-size: 1.6em;">"Hello, world!"</span> &lt;&lt; <span style="color: #DCDCAA;">std::endl</span>;
+    }  <span style="color: #4EC9B0;">std::string</span> role = <span style="color: #CE9178; font-size: 1.6em;">"Robotics Software Engineer"</span>;
+    <span style="color: #4EC9B0;">std::vector&lt;std::string&gt;</span> interests = {
+        <span style="color: #CE9178; font-size: 1.4em;">"Mobile Robotics"</span>, <span style="color: #CE9178; font-size: 1.4em;">"Reinforcement Learning"</span>, 
+        <span style="color: #CE9178; font-size: 1.4em;">"Legged Locomotion"</span>
+    };};
+  </code>
+</pre>
 
 
-</body>
-</html>
 
-
-<section id="research">
-  <h2 style="margin-bottom: 1em;">Publication</h2>
-  <div class="research-container">
-    
-    <div class="research-video">
-      <a href="https://www.youtube.com/watch?v=hBNCrke3qqk" target="_blank" class="video-thumbnail">
-        <img class="play-button" src="https://img.icons8.com/ios-filled/100/ffffff/play-button-circled--v1.png" alt="Play">
+      <div style="display: flex; justify-content: center; align-items: center; padding-left: 20px;">
+      <a href="media/HarshitaMhaske_resumedoc.pdf" target="_blank"
+         style="background-color: #007BFF; color: white; padding: 12px 40px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1em;">
+        View Resume
       </a>
     </div>
 
-    <div class="research-description">
-      <h3><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground Contact and Reaction Force Sensing for Linear Policy Control of Quadruped Robot</a></h3>
-      <p><strong>Authors:</strong> Harshita Mhaske, Aniket Mandhare, Dr. Jidong Huang, Dr. Yu Bai</p>
-      <p>The research focuses on testing a linear policy by augmenting the observation space with contacts and ground reaction forces.</p>
-      <p><em>Accepted at ICCAR 2025</em></p>
-      <img src="media/iccar_certificate.JPG" alt="ICCAR Certificate" class="research-certificate">
+
+  </div>
+</header>
+
+
+ <section id="research" style="padding: 1em;">
+  <h2 style="margin-bottom: 1em; text-align: center;">Publication</h2>
+
+  <div class="research-container" style="display: flex; flex-direction: column; gap: 2em; width: 100%; padding: 0 ;">
+
+    <div class="research-entry" style="width: 100%; border: 1px solid #ddd; padding: 1em; box-sizing: border-box; display: flex; flex-direction: row; min-height: 300px; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0.3 4px 8px rgba(0,0,0,0.1);">
+
+      <div class="research-video" style="flex: 1; margin-right: 1em; display: flex; align-items: center; justify-content: center;">
+        <a href="https://www.youtube.com/watch?v=hBNCrke3qqk" target="_blank">
+          <img class="play-button" src="https://img.icons8.com/ios-filled/100/ffffff/play-button-circled--v1.png" alt="Play" style="width: 60px; height: 60px; border-radius: 50%;">
+        </a>
+      </div>
+
+      <div class="research-description" style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
+        <h3><a href="https://arxiv.org/pdf/2503.01102" target="_blank">Ground Contact and Reaction Force Sensing for Linear Policy Control of Quadruped Robot</a></h3>
+        <p><strong>Authors:</strong> Harshita Mhaske, Aniket Mandhare, Dr. Jidong Huang, Dr. Yu Bai</p>
+        <p>The research focuses on testing a linear policy by augmenting the observation space with contacts and ground reaction forces.</p>
+        <p><em>Accepted at ICCAR 2025</em></p>
+      </div>
+
+      <div style="flex: 1.4; display: flex; align-items: center; justify-content: center; padding-left: 1em;">
+        <img src="media/iccar_certificate.JPG" alt="ICCAR Certificate" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+      </div>
+
     </div>
-    
+
   </div>
 </section>
-
-
 
     <section id="projects">
         <h1>Projects</h1>
@@ -436,6 +549,19 @@ footer {
                 </div>
             </div>
 
+              <div class="project">
+                <a href="html3.html">
+                    <img src="media/detect.gif" alt="Project 4 Image">
+                    <span class="hover-message">Click here for project details</span>
+                </a>
+                <div class="description">
+                    <h3>Detection and Classification of Objects using Pointing Gestures </h3>
+                    <div class = "subdescription">
+                        <p>Human -Robot Interaction using OpenCv, Mediapipe, Yolov3</p></div>
+                    
+                </div>
+            </div>
+
             <div class="project">
                 <a href="html2.html">
                     <img src="media/rtos1.GIF" alt="Project 3 Image">
@@ -449,18 +575,7 @@ footer {
                 </div>
             </div>
 
-            <div class="project">
-                <a href="html3.html">
-                    <img src="media/detect.gif" alt="Project 4 Image">
-                    <span class="hover-message">Click here for project details</span>
-                </a>
-                <div class="description">
-                    <h3>Detection and Classification of Objects using Pointing Gestures </h3>
-                    <div class = "subdescription">
-                        <p>Human -Robot Interaction using OpenCv, Mediapipe, Yolov3</p></div>
-                    
-                </div>
-            </div>
+          
 
             <div class="project">
                 <a href="path/to/project4.html">
@@ -484,7 +599,7 @@ footer {
                 <img src="media/robotics.jpg" alt="Robotics">
                 <div class="description">
                     <h3>Robotics</h3>
-                    <p>ROS, Robot Manipulation and Planning, Motor control, Artificial Intelligence</p>
+                    <p>Simulations, Motor control, Actuators, Sensors, Artificial Intelligence</p>
                 </div>
             </div>
 
@@ -500,7 +615,7 @@ footer {
                 <img src="media/program.jpg" alt="Programming">
                 <div class="description">
                     <h3>Programming</h3>
-                    <p>C++, Python, HTML, CSS</p>
+                    <p>C++, Python</p>
                 </div>
             </div>
 
@@ -516,7 +631,7 @@ footer {
                 <img src="media/elec.jpg" alt="Electrical">
                 <div class="description">
                     <h3>Electronics</h3>
-                    <p>Computer architecture, microprocessors, PCB reworking, Real-time operating system in embedded systems</p>
+                    <p>PCB Layout, Soldering, wiring harness fabrication Real-time operating system in embedded systems</p>
                 </div>
             </div>
 
@@ -532,17 +647,27 @@ footer {
         </div>
     </section>
 
-  <section id="Aboutme" style="text-align: center; padding: 3em 1em;">
+<section style="display: flex; justify-content: center; align-items: center; gap: 2em; padding: 3em 1em; flex-wrap: wrap; background-color: #ffffff;">
+
+  <div id="Aboutme" style="flex: 1; min-width: 300px; max-width: 800px; text-align: center;">
     <h2 style="font-size: 2.5em; margin-bottom: 1.5em; color: #333;">About Me</h2>
-    <div class="aboutme-container" style="display: inline-block; text-align: center; max-width: 600px; padding: 1em; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <img src="media/Harshita_pic.jpg" style="width: 200px; height: 300px; object-fit: cover; border: 3px solid #007bff;" alt="Harshita Mhaske">
-        <div class="Harshita Mhaske" style="text-align: left; margin-top: 1em;">
-            <h3 style="font-size: 1.8em; color: #333;">Harshita Mhaske</h3>
-            <p style="font-size: 1.1em; color: #555;">Email: <a href="mailto:harshitamhaske97@gmail.com" style="color: #007bff;">harshitamhaske97@gmail.com</a></p>
-            <p style="font-size: 1.1em; color: #555;">Location: Fullerton, CA</p>
-        </div>
+    <div class="aboutme-container" style="display: flex; align-items: flex-start; gap: 2em; background-color: #ffffff; border-radius: 12px; padding: 1em; border: 1px solid #ddd; margin: 0 auto;">
+      <img src="media/Harshita_pic.jpg" style="width: 200px; height: 300px; object-fit: cover; border: 3px solid #007bff;" alt="Harshita Mhaske">
+      <div style="text-align: left;">
+        <h3 style="font-size: 1.8em; color: #333;">Harshita Mhaske</h3>
+        <p style="font-size: 1.1em; color: #555;">Email: <a href="mailto:harshitamhaske97@gmail.com" style="color: #007bff;">harshitamhaske97@gmail.com</a></p>
+        <p style="font-size: 1.1em; color: #555;">Location: Fullerton, CA</p>
+      </div>
     </div>
+  </div>
+
 </section>
+
+
+
+
+
+
 <section id="hobbies" style="text-align: center; background-color: #fff; padding: 3em 1em;">
     <h2 style="font-size: 2.5em; margin-bottom: 1.5em; color: #333;">Hobbies and Activities</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2em;">
@@ -580,5 +705,8 @@ footer {
 
 
     
-        <footer>
-            <p>&copy; 2023 Harshita Mhaske</p
+      <footer>
+    <p>&copy; 2023 Harshita Mhaske</p>
+</footer>
+</body>
+</html>
